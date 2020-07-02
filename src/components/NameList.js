@@ -22,7 +22,8 @@ function NameList() {
             }
          ]
          //binding the person parameter in the map method as a props inside the <person />
-    const personList = persons.map(person => <Person  person = {person}/> ) 
+         //The Key prop should be unique value for react to render the values in the list
+    const personList = persons.map(person =>  <Person key={person.id} person = {person}/> ) 
     return (
         <div> {personList}
             {/* regular way of printing the list
